@@ -28,8 +28,8 @@
 
 class LoopAuditioneerApp : public wxApp {
 public:
-  virtual bool OnInit();
-  virtual int OnExit();
+  bool OnInit() override;
+  int OnExit() override;
   MyFrame *frame;
   wxIconBundle m_icons;
   wxHtmlHelpController *m_helpController;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>org.loopauditioneer.LoopAuditioneer.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>LoopAuditioneer</name>
+  <summary>Software for loop and cue handling in .wav files</summary>
+  <content_rating type="oars-1.0" />
+
+  <description>
+    <p>
+      LoopAuditioneer is an audio loop and cue editor for wave files.
+    </p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The main window</caption>
+      <image>https://loopauditioneer.sourceforge.io/images/mainwindow.jpg</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://loopauditioneer.sourceforge.io/</url>
+
+  <provides>
+    <binary>loopauditioneer</binary>
+  </provides>
+
+  <releases>
+    <release version="0.8.8" date="2021-09-26" />
+  </releases>
+</component>

@@ -35,6 +35,8 @@
 #include <wx/filename.h>
 #include "ListInfoDialog.h"
 #include "AudioSettingsDialog.h"
+#include <wx/stdpaths.h>
+#include <wx/xrc/xmlres.h>
 
 bool MyFrame::loopPlay = true; // default to loop play
 int MyFrame::volumeMultiplier = 1; // default value
@@ -765,24 +767,25 @@ MyFrame::MyFrame(const wxString& title) : wxFrame(NULL, wxID_ANY, title), m_time
   // Create toolbar
   toolBar = CreateToolBar(wxNO_BORDER | wxTB_HORIZONTAL | wxTB_FLAT);
   toolBar->SetToolBitmapSize(wxSize(24, 24));
-  wxImage::AddHandler(new wxPNGHandler);
-  wxBitmap selectFolder(wxT("../icons/24x24/Open_folder.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap openSelectedFile(wxT("../icons/24x24/Open_file.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap saveFile(wxT("../icons/24x24/Save.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap saveFileAs(wxT("../icons/24x24/Save_as.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap startPlayback(wxT("../icons/24x24/Right.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap stopPlayback(wxT("../icons/24x24/Stop.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap loopCreation(wxT("../icons/24x24/Refresh.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap autoLoop(wxT("../icons/24x24/Search.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap autoLoopSettings(wxT("../icons/24x24/Yin-Yang.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap batchProcess(wxT("../icons/24x24/Gear.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap pitchInfo(wxT("../icons/24x24/Bell.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap zoomInAmp(wxT("../icons/24x24/Zoom_in.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap zoomOutAmp(wxT("../icons/24x24/Zoom_out.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap crossfade(wxT("../icons/24x24/Wizard.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap cutfade(wxT("../icons/24x24/Software.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap viewloop(wxT("../icons/24x24/Diagram.png"), wxBITMAP_TYPE_PNG);
-  wxBitmap listInfo(wxT("../icons/24x24/Text.png"), wxBITMAP_TYPE_PNG);
+
+  wxBitmap selectFolder(wxXmlResource::Get()->LoadBitmap("Open_folder"));
+  wxBitmap openSelectedFile(wxXmlResource::Get()->LoadBitmap("Open_file"));
+  wxBitmap saveFile(wxXmlResource::Get()->LoadBitmap("Save"));
+  wxBitmap saveFileAs(wxXmlResource::Get()->LoadBitmap("Save_as"));
+  wxBitmap startPlayback(wxXmlResource::Get()->LoadBitmap("Right"));
+  wxBitmap stopPlayback(wxXmlResource::Get()->LoadBitmap("Stop"));
+  wxBitmap loopCreation(wxXmlResource::Get()->LoadBitmap("Refresh"));
+  wxBitmap autoLoop(wxXmlResource::Get()->LoadBitmap("Search"));
+  wxBitmap autoLoopSettings(wxXmlResource::Get()->LoadBitmap("Yin-Yang"));
+  wxBitmap batchProcess(wxXmlResource::Get()->LoadBitmap("Gear"));
+  wxBitmap pitchInfo(wxXmlResource::Get()->LoadBitmap("Bell"));
+  wxBitmap zoomInAmp(wxXmlResource::Get()->LoadBitmap("Zoom_in"));
+  wxBitmap zoomOutAmp(wxXmlResource::Get()->LoadBitmap("Zoom_out"));
+  wxBitmap crossfade(wxXmlResource::Get()->LoadBitmap("Wizard"));
+  wxBitmap cutfade(wxXmlResource::Get()->LoadBitmap("Software"));
+  wxBitmap viewloop(wxXmlResource::Get()->LoadBitmap("Diagram"));
+  wxBitmap listInfo(wxXmlResource::Get()->LoadBitmap("Text"));
+
   toolBar->AddTool(FILE_SELECT, wxT("Select working folder"), selectFolder, wxT("Select working folder"));
   toolBar->AddTool(OPEN_SELECTED, wxT("Open selected file"), openSelectedFile, wxT("Open selected file"));
   toolBar->AddTool(wxID_SAVE, wxT("Save file"), saveFile, wxT("Save file"));

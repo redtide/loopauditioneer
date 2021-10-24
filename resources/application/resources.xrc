@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc" version="2.5.3.0">
+  <object class="wxIcon" name="loopy16">icons/LoopyIcon-16.png</object>
+  <object class="wxIcon" name="loopy24">icons/LoopyIcon-24.png</object>
+  <object class="wxIcon" name="loopy32">icons/LoopyIcon-32.png</object>
+  <object class="wxIcon" name="loopy48">icons/LoopyIcon-48.png</object>
+  <object class="wxBitmap" name="Bell">free-pixel-icons/24x24/Bell.png</object>
+  <object class="wxBitmap" name="Diagram">free-pixel-icons/24x24/Diagram.png</object>
+  <object class="wxBitmap" name="Gear">free-pixel-icons/24x24/Gear.png</object>
+  <object class="wxBitmap" name="Open_file">free-pixel-icons/24x24/Open_file.png</object>
+  <object class="wxBitmap" name="Open_folder">free-pixel-icons/24x24/Open_folder.png</object>
+  <object class="wxBitmap" name="Refresh">free-pixel-icons/24x24/Refresh.png</object>
+  <object class="wxBitmap" name="Right">free-pixel-icons/24x24/Right.png</object>
+  <object class="wxBitmap" name="Save_as">free-pixel-icons/24x24/Save_as.png</object>
+  <object class="wxBitmap" name="Save">free-pixel-icons/24x24/Save.png</object>
+  <object class="wxBitmap" name="Search">free-pixel-icons/24x24/Search.png</object>
+  <object class="wxBitmap" name="Software">free-pixel-icons/24x24/Software.png</object>
+  <object class="wxBitmap" name="Stop">free-pixel-icons/24x24/Stop.png</object>
+  <object class="wxBitmap" name="Text">free-pixel-icons/24x24/Text.png</object>
+  <object class="wxBitmap" name="Wizard">free-pixel-icons/24x24/Wizard.png</object>
+  <object class="wxBitmap" name="Yin-Yang">free-pixel-icons/24x24/Yin-Yang.png</object>
+  <object class="wxBitmap" name="Zoom_in">free-pixel-icons/24x24/Zoom_in.png</object>
+  <object class="wxBitmap" name="Zoom_out">free-pixel-icons/24x24/Zoom_out.png</object>
+</resource>
